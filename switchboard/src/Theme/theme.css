@@ -1,0 +1,34 @@
+:root {
+  font-size: 1.1vw;
+  --primary-font: "Poppins", sans-serif;
+  --font-size-heading-1: 6rem;
+  --font-size-heading-2: 3rem;
+  --font-size-1: 2rem;
+  --font-size-2: 1.5rem;
+  --font-size-3: 1rem;
+  --font-size-4: 0.8rem;
+  --font-size-5: 0.5rem;
+}
+
+@media only screen and (max-device-width: 760px) {
+  :root {
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-device-width: 420px) {
+  :root {
+    font-size: 3vw;
+    text-align: center;
+  }
+}
+
+body[data-theme="event-theme"] {
+  --bg-color: #fff;
+  --headings-color: #000000;
+}
+
+body[data-theme="wedding-theme"] {
+  --bg-color: #000000;
+  --headings-color: #fff;
+}
