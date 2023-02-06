@@ -11,6 +11,7 @@ import GalleryScrollTwo from "./GalleryScrollTwo-Section/GalleryScrollTwo";
 
 
 const Home = () => {
+  
 
   return (   
     <div className="home-main-container">

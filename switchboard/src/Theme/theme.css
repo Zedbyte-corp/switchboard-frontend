@@ -8,6 +8,8 @@
   --font-size-3: 1rem;
   --font-size-4: 0.8rem;
   --font-size-5: 0.5rem;
+  --primary-font-color-1: #F8F9FF;
+  --secondary-font-color-1: #13111D;
 }
 
 @media only screen and (max-device-width: 760px) {
@@ -24,11 +26,15 @@
 }
 
 body[data-theme="event-theme"] {
-  --bg-color: #fff;
-  --headings-color: #000000;
+  --color-1: #fe2185;
+  --color-2: #ff7433;
+  --color-3: #553df2;
+  --color-4: #16b4f2;
 }
 
 body[data-theme="wedding-theme"] {
-  --bg-color: #000000;
-  --headings-color: #fff;
+  --color-1: #a60321;
+  --color-2: #ffa500;
+  --color-3: #d90416;
+  --color-4: #590219;
 }

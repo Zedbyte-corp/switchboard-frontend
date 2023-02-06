@@ -4,15 +4,35 @@ import './index.css';
 import App from './App';
 import "./Theme/theme.css"
 import reportWebVitals from './reportWebVitals';
+import { configureStore } from "@reduxjs/toolkit";
+import allReducers from "./Redux/reducers";
+import { Provider } from "react-redux";
+import { applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 import { BrowserRouter } from 'react-router-dom';
+
+
+export const store = configureStore(
+  {
+    reducer: allReducers,
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+      serializableCheck: false,
+    })
+  },
+  applyMiddleware(thunk),
+  // chrome extension for redux
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
+  </Provider>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
