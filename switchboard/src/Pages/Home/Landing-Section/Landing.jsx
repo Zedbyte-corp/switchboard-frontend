@@ -10,10 +10,20 @@ const Landing = () => {
     const dispatch = useDispatch()
     const GetThemeStatus = useSelector(state => state.theme)
     const [PageContent, setPageContent] = useState(landingPageContent(GetThemeStatus))
+    // const [theme, setTheme] = useState("event-theme")
 
     useEffect(() => {
         setPageContent(landingPageContent(GetThemeStatus))
     }, [GetThemeStatus])
+
+    const changeTheme = (themeFlag) => {
+        dispatch(setTheme(themeFlag))
+        if (themeFlag === 0) {
+           document.body.setAttribute("data-theme", "event-theme")
+        } else {
+            document.body.setAttribute("data-theme", "wedding-theme")
+        }
+    }
 
 
     return (
@@ -23,13 +33,22 @@ const Landing = () => {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
         }}>
-            {/* {PageContent.image} */}
-            <button onClick={() => dispatch(setTheme(1))}>
-               wedding
-            </button>
-            <button onClick={() => dispatch(setTheme(0))}>
-                event
-            </button>
+            <div className="landing-left-container">
+                <div className='title-container'>{PageContent.heading}<span className='event-name-color'>{PageContent.companyName}</span></div>
+                <div className='description-container'>{PageContent.content}</div>
+                <div className='button-container'>
+                    <button className={GetThemeStatus ? "button_inactive" : "button_active"} onClick={() => changeTheme(0)}>
+                        Events
+                    </button>
+                    <button className={GetThemeStatus ? "button_active" : "button_inactive"} onClick={() => changeTheme(1)}>
+                        Wedding
+                    </button>
+                </div>
+
+            </div>
+            <div className="landing-right-container">
+
+            </div>
         </div>
     )
 }

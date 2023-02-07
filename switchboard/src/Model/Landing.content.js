@@ -6,7 +6,8 @@ export const landingPageContent = (GetThemeStatus) => {
   
   return {
     image: !GetThemeStatus ? eventBg : weddingBg,
-    heading: "we are SWITCHBOARD",
+    heading: "we are ",
+    companyName:"SWITCHBOARD",
     content: "SWITCHBOARD is an event organizing company that specializes in delivering seamless  event experiences for clients whether it's a corporate conference, a personal celebration, or a community gathering, you name it, our team of experts is dedicated to bringing your vision to life and making sure every detail is taken care of.",
     buttons: [
       {

@@ -34,17 +34,10 @@ const Header = () => {
 
   const routeToTeam = () => {
     setTheme("wedding-theme")
-    // alert("Team Clicked")
-    // store.dispatch(setProductPage(0))
-    // navigate(siteMap.ProductPage.path, { replace: false });
-    // handleClose()
   }
 
   const routeToGallery = () => {
     setTheme("event-theme")
-    // alert("Gallery Clicked")
-    // navigate(siteMap.GalleryPage.path, { replace: false });
-    // handleClose()
   }
 
 
