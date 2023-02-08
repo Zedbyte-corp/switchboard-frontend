@@ -52,6 +52,7 @@ body[data-theme="event-theme"] {
   --color-2: #ff7433;
   --color-3: #553df2;
   --color-4: #16b4f2;
+  --color-5: #DEDBEF;
 }
 
 body[data-theme="wedding-theme"] {
@@ -59,4 +60,5 @@ body[data-theme="wedding-theme"] {
   --color-2: #ffa500;
   --color-3: #d90416;
   --color-4: #590219;
+  --color-5: #FFEAEA;
 }
