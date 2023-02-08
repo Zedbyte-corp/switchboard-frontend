@@ -1,26 +1,26 @@
-import { useEffect } from 'react';
-import LocomotiveScroll from 'locomotive-scroll';
+// import { useEffect } from 'react';
+// import LocomotiveScroll from 'locomotive-scroll';
 // import ImageTrailComp from './imageTrail';
-import { preloadImages } from '../utils';
+// import { preloadImages } from '../utils';
 
-export const GalleryScrollOneContent = (GetThemeStatus) => {
+export const GalleryScrollOneContent = () => {
   
-  useEffect(() => {
-    Promise.all([preloadImages('.tiles__line-img')]).then(() => {
+  // useEffect(() => {
+  //   Promise.all([preloadImages('.tiles__line-img')]).then(() => {
   
-      const scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true
-      });
-      // ImageTrailComp();
-    });
-  }, [])
+  //     const scroll = new LocomotiveScroll({
+  //       el: document.querySelector('[data-scroll-container]'),
+  //       smooth: true
+  //     });
+  //     // ImageTrailComp();
+  //   });
+  // }, [])
 
-  const importAll = require =>
-    require.keys().reduce((acc, next) => {
-      acc[next.replace("./", "")] = require(next);
-      return acc;
-    }, {});
+  // const importAll = require =>
+  //   require.keys().reduce((acc, next) => {
+  //     acc[next.replace("./", "")] = require(next);
+  //     return acc;
+  //   }, {});
 
   const galleryImageOne = importAll(require.context("../Assets/Images/ScrollGalleryOne", false, /\.(png|jpe?g|svg)$/));
 
