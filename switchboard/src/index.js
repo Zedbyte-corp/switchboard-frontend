@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react"
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -21,7 +21,7 @@ export const store = configureStore(
   },
   applyMiddleware(thunk),
   // chrome extension for redux
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

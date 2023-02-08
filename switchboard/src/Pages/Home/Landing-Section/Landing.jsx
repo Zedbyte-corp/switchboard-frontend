@@ -8,18 +8,19 @@ import { setTheme } from "../../../Redux/actions/theme.action";
 
 const Landing = () => {
     const dispatch = useDispatch()
+    const landingImages = useSelector(state => state.landingImages)
     const GetThemeStatus = useSelector(state => state.theme)
-    const [PageContent, setPageContent] = useState(landingPageContent(GetThemeStatus))
+    const [PageContent, setPageContent] = useState(landingPageContent(GetThemeStatus, landingImages))
     // const [theme, setTheme] = useState("event-theme")
 
     useEffect(() => {
-        setPageContent(landingPageContent(GetThemeStatus))
+        setPageContent(landingPageContent(GetThemeStatus, landingImages))
     }, [GetThemeStatus])
 
     const changeTheme = (themeFlag) => {
         dispatch(setTheme(themeFlag))
         if (themeFlag === 0) {
-           document.body.setAttribute("data-theme", "event-theme")
+            document.body.setAttribute("data-theme", "event-theme")
         } else {
             document.body.setAttribute("data-theme", "wedding-theme")
         }

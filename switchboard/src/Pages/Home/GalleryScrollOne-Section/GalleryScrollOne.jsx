@@ -3,28 +3,24 @@ import { useEffect } from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
 import ImageTrailComp from '../../../imageTrail';
 import { preloadImages } from '../../../utils';
-import { GalleryScrollOneContent } from '../../../Model/GalleryScrollOne.content'
+import { importAll } from '../../../utils';
 // import sfs from "../../../Assets/Images/ScrollGalleryOne"
 
 
 const GalleryScrollOne = () => {
 
   useEffect(() => {
-    Promise.all([preloadImages('.tiles__line-img')]).then(() => {
+    // Promise.all([preloadImages('.tiles__line-img')]).then(() => {
 
-      const scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true
-      });
-      ImageTrailComp();
-    });
+    //   const scroll = new LocomotiveScroll({
+    //     el: document.querySelector('[data-scroll-container]'),
+    //     smooth: true
+    //   });
+    //   ImageTrailComp();
+    // });
   }, [])
 
-  const importAll = require =>
-    require.keys().reduce((acc, next) => {
-      acc[next.replace("./", "")] = require(next);
-      return acc;
-    }, {});
+
 
   const galleryImageOne = importAll(require.context("../../../Assets/Images/ScrollGalleryOne", false, /\.(png|jpe?g|svg)$/));
 
