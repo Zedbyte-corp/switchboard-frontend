@@ -1,8 +1,15 @@
 import './Trail.css'
 import { useSelector } from "react-redux";
+import { useEffect } from 'react';
+import { ImageTrailComp } from '../../../utils';
 
 const Trail = () => {
     const scrollEventImagesTwo = useSelector(state => state.scrollEventImagesTwo)
+
+    useEffect(() => {
+        ImageTrailComp();
+    }, [])
+
 
     return (
         <div className='trail-main-container'>

@@ -5,7 +5,7 @@ import Header from './Components/Header/header.component';
 import Footer from './Components/Footer/footer.component';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-import { ImageTrailComp, importAll, loadImage, preloadFonts } from './utils';
+import { importAll, loadImage, preloadFonts } from './utils';
 import { useDispatch } from "react-redux";
 import { setLandingImages, setScrollEventImagesOne, setScrollEventImagesTwo, setScrollWeddingImagesOne, setScrollWeddingImagesTwo } from './Redux/actions/images.action';
 import LocomotiveScroll from 'locomotive-scroll';
@@ -86,7 +86,6 @@ function App() {
             getDirection: true,
             smoothMobile: false,
           });
-          ImageTrailComp();
           new ResizeObserver(() => scroll.update()).observe(
             document.querySelector("[data-scroll-container]")
           );
