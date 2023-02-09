@@ -16,7 +16,9 @@ const WhyUs = () => {
 
   return (
     <div className="whyus-main-container">
-      <div className="whyus-left-container"></div>
+      <div className="whyus-left-container">
+        <img className="whyus-image" src={PageContent.images} alt="" />
+      </div>
       <div className="whyus-right-container">
         <div className="whyus-subheading">{PageContent.subheading}</div>
         <div className="whyus-heading">{PageContent.heading}</div>

@@ -10,6 +10,7 @@ const GalleryScrollOne = () => {
   const [PageContent, setPageContent] = useState(galleryScrollContent(GetThemeStatus, scrollEventImagesOne, scrollWeddingImagesOne))
 
   useEffect(() => {
+    console.log("page-content", PageContent)
     setPageContent(galleryScrollContent(GetThemeStatus, scrollEventImagesOne, scrollWeddingImagesOne))
   }, [GetThemeStatus])
 
@@ -25,7 +26,6 @@ const GalleryScrollOne = () => {
               if (value >= 0 && value <= 2)
                 return <div key={value} className="tiles__line-img" style={{ backgroundImage: `url(${PageContent[key]})` }}></div>
             })}
-
           </div>
           <div className="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
             <div className="tiles__line-img"></div>

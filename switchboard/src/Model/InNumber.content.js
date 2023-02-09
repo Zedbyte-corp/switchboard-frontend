@@ -9,7 +9,7 @@ import wedding4 from "../Assets/Images/Numbers/wedding/wedding-icon-4.svg"
 
 
 
-export const inNumberContent = (GetThemeStatus,) => {
+export const inNumberContent = (GetThemeStatus) => {
     return [
         {
             icon: !GetThemeStatus ? event1 : wedding1,
