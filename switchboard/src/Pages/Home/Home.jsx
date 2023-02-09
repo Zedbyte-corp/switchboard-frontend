@@ -7,23 +7,34 @@ import InNumbers from "./InNumbers-Section/InNumbers";
 import OurWorks from "./OurWorks-Section/OurWorks";
 import Testimonials from "./Testimonial-Section/Testimonials";
 import Team from "./Team-Section/Team";
+import Trail from "./Trail-Section/Trail";
 import GalleryScrollTwo from "./GalleryScrollTwo-Section/GalleryScrollTwo";
+import { useEffect } from "react";
+import LocomotiveScroll from 'locomotive-scroll';
 
 
 const Home = () => {
-  
 
-  return (   
+  useEffect(() => {
+    // const scroll = new LocomotiveScroll({
+    //   el: document.querySelector('[data-scroll-container]'),
+    //   smooth: true
+    // })
+  }
+    , [])
+
+  return (
     <div className="home-main-container">
-      <Landing/>
-      <GalleryScrollOne/>
-      <WhyUs/>
-      <Events/>
-      <InNumbers/>
-      <OurWorks/>
-      <Testimonials/>
-      <Team/>
-      <GalleryScrollTwo/>
+      <Landing />
+      <GalleryScrollOne />
+      <WhyUs />
+      <Events />
+      <InNumbers />
+      <OurWorks />
+      <Testimonials />
+      <Team />
+      <GalleryScrollTwo />
+      <Trail />
     </div>
   )
 }

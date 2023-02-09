@@ -16,9 +16,9 @@ const Header = () => {
   const [theme, setTheme] = useState("event-theme")
   const open = Boolean(anchorEl);
 
-  useEffect(()=>{
+  useEffect(() => {
     document.body.setAttribute("data-theme", theme)
-  },[theme])
+  }, [theme])
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -54,9 +54,9 @@ const Header = () => {
       </div>
       <div className="header-menu-container">
         <div className="desktop-menu">
-        <MenuItem className="header-menu-item"  onClick={() => { routeToHome() }}>Home</MenuItem>
-        <MenuItem className="header-menu-item" onClick={() => { routeToGallery() }}>Gallery</MenuItem>
-        <MenuItem className="header-menu-item" onClick={() => { routeToTeam() }}>Our Team</MenuItem>
+          <MenuItem className="header-menu-item" onClick={() => { routeToHome() }}>Home</MenuItem>
+          <MenuItem className="header-menu-item" onClick={() => { routeToGallery() }}>Gallery</MenuItem>
+          <MenuItem className="header-menu-item" onClick={() => { routeToTeam() }}>Our Team</MenuItem>
         </div>
         <div className="header-mobile-menu">
           <div onClick={handleClick}>

@@ -8,19 +8,19 @@ import { inNumberContent } from '../../../Model/InNumber.content'
 
 const InNumbers = () => {
   // const dispatch = useDispatch()
-    const GetThemeStatus = useSelector(state => state.theme)
-    const [PageContent, setPageContent] = useState(inNumberContent(GetThemeStatus))
+  const GetThemeStatus = useSelector(state => state.theme)
+  const [PageContent, setPageContent] = useState(inNumberContent(GetThemeStatus))
 
-    useEffect(() => {
-      setPageContent(inNumberContent(GetThemeStatus))
+  useEffect(() => {
+    setPageContent(inNumberContent(GetThemeStatus))
   }, [GetThemeStatus])
 
-  const NumberContainer = PageContent.map((numbercard)=>{
-    return <NumberCard icon={numbercard.icon} number={numbercard.number} description={numbercard.description} color_id={numbercard.color_id}/>
+  const NumberContainer = PageContent.map((numbercard) => {
+    return <NumberCard icon={numbercard.icon} number={numbercard.number} description={numbercard.description} color_id={numbercard.color_id} />
   })
 
   return (
-    <div className="InNumbers-main-container">
+    <div className="InNumbers-main-container" >
       {NumberContainer}
     </div>
   )

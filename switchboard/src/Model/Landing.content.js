@@ -1,10 +1,4 @@
-import eventBg from "../Assets/Images/Landing/event-bg.png"
-import weddingBg from "../Assets/Images/Landing/wedding-bg.png"
-// import { useSelector } from "react-redux";
-
-
 export const landingPageContent = (GetThemeStatus, landingImages) => {
-  // const a = useSelector(state => state.landingImages)
 
   return {
     image: !GetThemeStatus ? landingImages[Object.keys(landingImages)[0]] : landingImages[Object.keys(landingImages)[1]],

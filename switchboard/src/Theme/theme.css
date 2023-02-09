@@ -12,7 +12,8 @@
   --secondary-font-color-1: #13111d;
 }
 
-.button_active, .button_inactive {
+.button_active,
+.button_inactive {
   height: fit-content;
   width: fit-content;
   border-radius: 20px;

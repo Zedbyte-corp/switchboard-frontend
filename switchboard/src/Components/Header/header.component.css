@@ -18,7 +18,7 @@
   color: #dee0dc;
 }
 
-.header-logo{
+.header-logo {
   width: 40%;
 }
 
@@ -43,12 +43,12 @@
 .header-menu-item {
   cursor: pointer;
   font-family: "Poppins";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 1vw;
-    display: flex;
-    align-items: flex-start;
-    color: #dee0dc;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1vw;
+  display: flex;
+  align-items: flex-start;
+  color: #dee0dc;
 }
 
 /* .header-menu-item:hover {
