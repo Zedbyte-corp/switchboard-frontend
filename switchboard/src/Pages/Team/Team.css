@@ -1,14 +1,104 @@
-.team-page-main-container{
-    height: 100vh;
-    width: 100%;
+.team-page-main-container {
+  height: fit-content;
+  width: 100%;
+  margin-top: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1vh;
+  background: var(--bg-color);
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vw;
+}
+
+.team-page-member-container {
+  height: fit-content;
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10%;
+  padding: 10vh 0 10vh 0;
+}
+
+.team-page-map-container {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+.team-page-map-title {
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--font-size-heading-2);
+  color: var(--secondary-font-color-1);
+}
+
+.team-page-map-description {
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 300;
+  text-align: justify;
+  font-size: var(--font-size-3);
+  color: var(--secondary-font-color-1);
+}
+
+.team-page-map-image {
+  height: 80vh;
+  width: 100%;
+}
+
+.map-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.team-page-contact-container {
+  height: fit-content;
+  width: 90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.office-container {
+  height: fit-content;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom:5vh;
+  margin-top:5vh;
+}
+
+.contact-title {
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--font-size-2);
+  color: var(--secondary-font-color-1);
+}
+
+.contact-content{
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 1vh;
-    background: var(--bg-color);
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 3vw;
+    font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 300;
+  text-align: justify;
+  font-size: var(--font-size-3);
+  color: var(--secondary-font-color-1);
 }

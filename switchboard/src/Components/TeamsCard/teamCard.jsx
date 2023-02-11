@@ -13,6 +13,7 @@ const TeamCard = ({ image, title, description }) => {
             justifyContent: "flex-start",
             flexDirection: "column",
             gap: "1vh",
+            margin:"5vh"
         }}>
 
             <img className="team-image-container" src={image} alt="" />

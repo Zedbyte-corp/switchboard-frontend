@@ -14,7 +14,7 @@ const Team = () => {
     setPageContent(teamContent(GetThemeStatus))
   }, [GetThemeStatus])
 
-  const TeamContainer = PageContent.team.map((teamcard)=>{
+  const TeamContainer = PageContent.team.slice(0, 3).map((teamcard)=>{
     return <TeamCard image={teamcard.image} title={teamcard.name} description={teamcard.content}/>
   })
 

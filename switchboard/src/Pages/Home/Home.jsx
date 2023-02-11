@@ -7,7 +7,7 @@ import InNumbers from "./InNumbers-Section/InNumbers";
 import OurWorks from "./OurWorks-Section/OurWorks";
 import Testimonials from "./Testimonial-Section/Testimonials";
 import Team from "./Team-Section/Team";
-import Trail from "./Trail-Section/Trail";
+// import Trail from "./Trail-Section/Trail";
 import GalleryScrollTwo from "./GalleryScrollTwo-Section/GalleryScrollTwo";
 import { useEffect } from "react";
 import LocomotiveScroll from 'locomotive-scroll';
@@ -31,10 +31,10 @@ const Home = () => {
       <Events />
       <InNumbers />
       <OurWorks />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Team />
       <GalleryScrollTwo />
-      <Trail />
+      {/* <Trail /> */}
     </div>
   )
 }

@@ -18,7 +18,7 @@ const Trail = () => {
                     if (value >= 0 && value <= 14)
                         return <img className="trail__img" src={scrollEventImagesTwo[key]} alt={value} key={value} />
                 })}
-                <h3 className="trail__title">Hi</h3>
+                <h3 className="trail__title">Team</h3>
             </div>
         </div>
     );
