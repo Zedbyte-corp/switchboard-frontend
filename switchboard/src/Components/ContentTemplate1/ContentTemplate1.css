@@ -84,4 +84,12 @@
         width: 100%;   
     }
 
+    .title{
+        justify-content: center;
+    } 
+
+    .content2-container{
+        width: 80%;
+    }
+
 }

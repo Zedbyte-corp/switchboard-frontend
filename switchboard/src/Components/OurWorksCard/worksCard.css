@@ -1,3 +1,14 @@
+.workCard-main-container{
+    height: fit-content;
+    width: 20%;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1vh,
+}
+
 .work-image-container{
     width: 100%;
     object-fit:cover;
@@ -30,4 +41,11 @@
     text-align: justify;
     font-size: var(--font-size-4);
     color: var(--secondary-font-color-1);
+}
+
+@media only screen and (max-device-width: 760px) {
+    .workCard-main-container{
+        width: 80%;
+        gap: 1vh;
+    }
 }

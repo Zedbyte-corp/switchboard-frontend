@@ -37,6 +37,15 @@
     color: var(--primary-font-color-1);
 }
 
+.landing-image-container{
+    height: fit-content;
+    width: 80%;
+}
+
+.landing-image-container > img{
+    width: 80%;
+}
+
 .event-name-color{
     color: var(--color-1);
 }
@@ -67,4 +76,27 @@
     height: 80%;
     width: 50%;
     /* background: #bf6969; */
+}
+
+
+@media only screen and (max-device-width: 760px) {
+
+    .landing-main-container{
+        height: 60vh;
+    }
+    
+    .landing-left-container{
+        width: 90%;
+    }
+
+    .landing-right-container{
+        width: 0%;
+        /* background: #bf6969; */
+    }
+
+    .landing-image-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

@@ -112,6 +112,12 @@
   height: calc(var(--tileswrap-height) / 5 - (4 * var(--tile-margin) / 2));
 }
 
+@media only screen and (max-device-width: 760px) {
+  .GalleryScrollOne-main-container{
+    display: none;
+  }
+}
+
 @media screen and (min-width: 53em) {
 
   .tiles--columns-rotated .tiles__line {

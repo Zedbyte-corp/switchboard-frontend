@@ -102,3 +102,18 @@
   font-size: var(--font-size-3);
   color: var(--secondary-font-color-1);
 }
+
+@media only screen and (max-device-width: 760px) {
+  .team-page-contact-container{
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .office-container {
+    width: 70%;
+  }
+
+  .contact-content{
+    text-align: center;
+  }
+}

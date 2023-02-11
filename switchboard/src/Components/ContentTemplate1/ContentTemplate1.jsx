@@ -16,7 +16,7 @@ const ContentTemplate1 = ({ title, description, image, isReverse }) => {
             setflexDirection("column")
             setGap("3vh")
         }
-    }, [])
+    }, [isReverse])
 
     
     return (

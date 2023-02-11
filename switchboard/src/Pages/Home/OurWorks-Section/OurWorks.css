@@ -55,3 +55,9 @@
     flex-wrap: wrap;
 
 }
+
+@media only screen and (max-device-width: 760px) {
+    .ourworks-content-container{
+       gap: 2vh;
+    }
+}

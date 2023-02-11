@@ -5,6 +5,7 @@ import { landingPageContent } from '../../../Model/Landing.content'
 // import { ChangeTheme } from '../../../Facade/theme'
 import { useDispatch } from "react-redux";
 import { setTheme } from "../../../Redux/actions/theme.action";
+import logo from "../../../Assets/logo-white.svg"
 
 const Landing = () => {
     const dispatch = useDispatch()
@@ -35,7 +36,14 @@ const Landing = () => {
             backgroundRepeat: 'no-repeat'
         }}>
             <div className="landing-left-container">
-                <div className='title-container'>{PageContent.heading}<span className='event-name-color'>{PageContent.companyName}</span></div>
+                <div className='title-container'>{PageContent.heading}
+                <span className='event-name-color'>
+                    {PageContent.companyName}
+                </span>
+                </div>
+                {/* <div className="landing-image-container">
+                    <img src={logo} alt="" />
+                </div> */}
                 <div className='description-container'>{PageContent.content}</div>
                 <div className='button-container'>
                     <button className={GetThemeStatus ? "button_inactive" : "button_active"} onClick={() => changeTheme(0)}>

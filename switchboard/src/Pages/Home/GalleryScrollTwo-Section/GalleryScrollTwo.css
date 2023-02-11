@@ -72,6 +72,12 @@
     height: calc(25vw * 1.3);
 }
 
+@media only screen and (max-device-width: 760px) {
+    .GalleryScrollTwo-main-container{
+      display: none;
+    }
+  }
+
 @media screen and (min-width: 53em) {
 
     .tiles--columns-rotated .tiles__line {

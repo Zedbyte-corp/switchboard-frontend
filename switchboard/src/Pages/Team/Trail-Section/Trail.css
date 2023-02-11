@@ -46,9 +46,17 @@ img {
     font-size: 27vw;
     mix-blend-mode: difference;
     -webkit-text-stroke: 2px #000000;
-    text-stroke: 2px #000000;
+    /* text-stroke: 2px #000000; */
     -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
+    /* text-fill-color: transparent; */
     color: transparent;
     pointer-events: none;
+}
+
+
+
+@media only screen and (max-device-width: 760px) {
+    .trail-main-container{
+        display: none;
+    }
 }

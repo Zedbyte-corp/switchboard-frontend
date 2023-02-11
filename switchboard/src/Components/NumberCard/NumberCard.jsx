@@ -4,15 +4,7 @@ import './NumberCard.css'
 
 const NumberCard = ({icon,number,description,color_id}) => {
     return (
-        <div style={{
-            height: "90%",
-            width: "20%",
-            borderRadius: "10px",
-            display: 'flex',
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-            gap:"10%",
+        <div className="Numbercard-main-container" style={{
             backgroundColor: `var(--color-${color_id})`
         }}>
             <div className='icon-container'>

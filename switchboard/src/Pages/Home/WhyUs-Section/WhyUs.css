@@ -14,7 +14,6 @@
     height: 90%;
     width: 45%;
     /* background: #000; */
-    
 }
 
 .whyus-image{
@@ -67,4 +66,27 @@
     justify-content: center;
     flex-direction: column;
     gap: 1%;
+}
+
+@media only screen and (max-device-width: 760px) {
+    .whyus-main-container{
+        height: fit-content;
+        flex-direction: column-reverse;
+        gap: 5vh;
+        margin: 5vh 0 5vh 0;
+    }
+
+    .whyus-right-container{
+        height: fit-content;
+        width: 100%;
+    }
+
+    .whyus-subheading{
+        text-align: center;
+    }
+
+    .whyus-left-container{
+        height: fit-content;
+        width: 90%;
+    }
 }

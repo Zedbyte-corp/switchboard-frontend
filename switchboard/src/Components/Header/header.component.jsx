@@ -6,7 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import {useLocation} from 'react-router-dom';
-// import LOGO from '../../Assets/logo.png'
+import LOGO from '../../Assets/logo-white.svg'
 // import { store } from "../../";
 // import { setProductPage } from '../../Redux/actions/product.action';
 
@@ -53,8 +53,8 @@ const Header = () => {
   return (
     <header className="header-main-container">
       <div className="header-logo-container" onClick={() => { routeToHome() }}>
-        {/* <img className="header-logo" src={LOGO} alt="" /> */}
-        LOGO
+        <img className="header-logo" src={LOGO} alt="" />
+        {/* LOGO */}
       </div>
       <div className="header-menu-container">
         <div className="desktop-menu">

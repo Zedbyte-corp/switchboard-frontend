@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     /* flex-direction: column; */
     /* background: #785360; */
     /* margin-top: 8vh; */
@@ -16,3 +17,9 @@
     /* gap: 10%; */
 }
 
+@media only screen and (max-device-width: 760px) {
+    .InNumbers-main-container{
+        height: fit-content;
+        gap: 2vh;
+    }
+}
