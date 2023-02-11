@@ -5,12 +5,14 @@ import { siteMap } from "../../Routes/SiteMap";
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import {useLocation} from 'react-router-dom';
 // import LOGO from '../../Assets/logo.png'
 // import { store } from "../../";
 // import { setProductPage } from '../../Redux/actions/product.action';
 
 
 const Header = () => {
+  const location = useLocation();
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
   const [theme, setTheme] = useState("event-theme")
