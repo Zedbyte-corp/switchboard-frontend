@@ -33,11 +33,13 @@ const Header = () => {
   }
 
   const routeToTeam = () => {
-    setTheme("wedding-theme")
+    navigate(siteMap.TeamPage.path, { replace: true });
+    // setTheme("wedding-theme")
   }
 
   const routeToGallery = () => {
-    setTheme("event-theme")
+    navigate(siteMap.GalleryPage.path, { replace: true });
+    // setTheme("event-theme")
   }
 
 
