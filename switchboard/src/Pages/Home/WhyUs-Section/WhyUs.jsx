@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { whyUsContent } from '../../../Model/WhyUs.content'
 // import { useDispatch } from "react-redux";
 
-
 const WhyUs = () => {
   // const dispatch = useDispatch()
   const GetThemeStatus = useSelector(state => state.theme)
@@ -17,6 +16,7 @@ const WhyUs = () => {
   return (
     <div className="whyus-main-container">
       <div className="whyus-left-container">
+
         <img className="whyus-image" src={PageContent.images} alt="" />
       </div>
       <div className="whyus-right-container">

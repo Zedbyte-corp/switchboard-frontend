@@ -44,18 +44,18 @@ function App() {
     require.context("./Assets/Images/Landing", false, /\.(png|jpe?g|svg)$/)
   );
   const scrollEventOne = importAll(
-    require.context("./Assets/Images/ScrollGalleryOneEvent", false, /\.(png|jpe?g|svg)$/)
+    require.context("./Assets/Images/ScrollGalleryOne/Event", false, /\.(png|jpe?g|svg)$/)
   );
 
   const scrollEventTwo = importAll(
-    require.context("./Assets/Images/ScrollGalleryTwoEvent", false, /\.(png|jpe?g|svg)$/)
+    require.context("./Assets/Images/ScrollGalleryTwo/Event", false, /\.(png|jpe?g|svg)$/)
   );
   const scrollWeddingOne = importAll(
-    require.context("./Assets/Images/ScrollGalleryOneWedding", false, /\.(png|jpe?g|svg)$/)
+    require.context("./Assets/Images/ScrollGalleryOne/Wedding", false, /\.(png|jpe?g|svg)$/)
   );
 
   const scrollWeddingTwo = importAll(
-    require.context("./Assets/Images/ScrollGalleryTwoWedding", false, /\.(png|jpe?g|svg)$/)
+    require.context("./Assets/Images/ScrollGalleryTwo/Wedding", false, /\.(png|jpe?g|svg)$/)
   );
 
 
