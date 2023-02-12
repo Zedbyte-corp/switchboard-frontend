@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   /* background: rgb(255, 255, 255); */
-  background: transparent;
+  /* background: transparent; */
   position: fixed;
   top: 0;
   z-index: 99;
@@ -48,7 +48,7 @@
   font-size: 1vw;
   display: flex;
   align-items: flex-start;
-  color: #dee0dc;
+  /* color: #dee0dc; */
 }
 
 /* .header-menu-item:hover {
