@@ -5,7 +5,7 @@ import { siteMap } from "../../Routes/SiteMap";
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import LOGO from '../../Assets/logo-white.svg'
 // import { store } from "../../";
 // import { setProductPage } from '../../Redux/actions/product.action';
@@ -51,7 +51,8 @@ const Header = () => {
   console.log(totalTimeTaken);
 
   return (
-    <header className="header-main-container">
+    <header className="header-main-container" data-scroll data-scroll-sticky data-scroll-target="#scroll-container">
+
       <div className="header-logo-container" onClick={() => { routeToHome() }}>
         <img className="header-logo" src={LOGO} alt="" />
         {/* LOGO */}

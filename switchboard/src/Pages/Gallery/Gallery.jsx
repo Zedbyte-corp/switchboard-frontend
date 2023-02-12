@@ -53,7 +53,7 @@ const Gallery = () => {
                 <div className="gallery-section-1-left-description">We handle all types of events for all types of people, culture, communities, or interests.</div>
             </div>
             <div className="gallery-section-2-container">
-                <Box sx={{ width: 1, height: '100%', overflowY: 'scroll' }}>
+                <Box sx={{ width: 1, height: '100%', overflowY: 'scroll', overflow: 'hidden' }}>
                     <ImageList variant="masonry" cols={!ismobile ? 3 : 1} gap={8}>
                         {Object.keys(scrollEventImagesOne).map((key, value) => (
                             <ImageListItem key={value}>

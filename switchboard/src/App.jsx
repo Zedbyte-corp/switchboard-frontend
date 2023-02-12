@@ -103,7 +103,7 @@ function App() {
 
 
   return (
-    <div data-scroll-container>{error ?
+    <div data-scroll-container id="scroll-container">{error ?
       <div className='app-main-container' >
         Some problem
       </div >
