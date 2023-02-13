@@ -9,7 +9,11 @@ import { useSelector } from "react-redux";
 
 const Gallery = () => {
     const [ismobile, setIsmobile] = useState(false)
+    // const scrollto = () => (window.scrollTo(0,0))
+
     useEffect(() => {
+        window.scrollTo(0,0)
+        // scrollto()
         if (window.screen.width <= 760) {
             setIsmobile(true)
         }

@@ -16,28 +16,29 @@ const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
-  const [theme, setTheme] = useState("event-theme")
   const [logo, setLogo] = useState(WHITELOGO)
   const [menuColor, setMenuColor] = useState("#dee0dc")
   const [headerBg, setHeaderBg] = useState("transparent")
   const open = Boolean(anchorEl);
+  const theme = "event-theme"
 
   useEffect(() => {
     
     // var header = document.getElementById("Header");
     console.log("header", document.body.scrollTop);
-    if(location.pathname === siteMap.GalleryPage.path || location.pathname === siteMap.TeamPage.path){
-      setHeaderBg("white")
-      setMenuColor("black")
-      setLogo(BLACKLOGO)
-      // document.getElementById("header").style.color = "blue";
-    }else{
+    if(location.pathname === siteMap.HomePage.path){
       setHeaderBg("transparent")
       setMenuColor("#dee0dc")
       setLogo(WHITELOGO)
+      // document.getElementById("header").style.color = "blue";
+    }else{
+      setHeaderBg("white")
+      setMenuColor("black")
+      setLogo(BLACKLOGO)
+      
     }
     document.body.setAttribute("data-theme", theme)
-  }, [theme,location, window])
+  }, [theme,location])
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -61,6 +62,11 @@ const Header = () => {
     // setTheme("event-theme")
   }
 
+  const routeToContact = () => {
+    navigate(siteMap.ContactPage.path, { replace: true });
+    // setTheme("event-theme")
+  }
+
 
   const start = window.performance.now();
   // Your operation
@@ -68,7 +74,7 @@ const Header = () => {
   console.log(totalTimeTaken);
 
   return (
-    <header id="Header" className="header-main-container" style={{backgroundColor:headerBg}} data-scroll data-scroll-sticky data-scroll-target="#scroll-container">
+    <header id="Header" className="header-main-container" style={{backgroundColor:headerBg}}>
 
       <div className="header-logo-container" onClick={() => { routeToHome() }}>
         <img className="header-logo" src={logo} alt="" />
@@ -79,6 +85,7 @@ const Header = () => {
           <MenuItem className="header-menu-item" style={{color:menuColor}} onClick={() => { routeToHome() }}>Home</MenuItem>
           <MenuItem className="header-menu-item" style={{color:menuColor}} onClick={() => { routeToGallery() }}>Gallery</MenuItem>
           <MenuItem className="header-menu-item" style={{color:menuColor}} onClick={() => { routeToTeam() }}>Our Team</MenuItem>
+          <MenuItem className="header-menu-item" style={{color:menuColor}} onClick={() => { routeToContact() }}>Contact Us</MenuItem>
         </div>
         <div className="header-mobile-menu">
           <div onClick={handleClick}>
@@ -94,8 +101,9 @@ const Header = () => {
             }}
           >
             <MenuItem className="header-mobile-menu-item" onClick={() => { routeToHome() }}>Home</MenuItem>
-            <MenuItem className="header-menu-item" onClick={() => { routeToGallery() }}>Gallery</MenuItem>
-            <MenuItem className="header-menu-item" onClick={() => { routeToTeam() }}>Our Team</MenuItem>
+            <MenuItem className="header-mobile-menu-item" onClick={() => { routeToGallery() }}>Gallery</MenuItem>
+            <MenuItem className="header-mobile-menu-item" onClick={() => { routeToTeam() }}>Our Team</MenuItem>
+            <MenuItem className="header-mobile-menu-item" onClick={() => { routeToContact() }}>Contact Us</MenuItem>
           </Menu>
         </div>
       </div>

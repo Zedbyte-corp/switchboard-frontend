@@ -13,5 +13,10 @@ export const siteMap = {
     title: "Team",
     path: "/team",
     description: "SwitchBoard's team page",
+  },
+  ContactPage: {
+    title: "Contact",
+    path: "/contact",
+    description: "SwitchBoard's contact page",
   }
 };

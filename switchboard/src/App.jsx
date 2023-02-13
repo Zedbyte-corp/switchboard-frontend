@@ -6,13 +6,16 @@ import Footer from './Components/Footer/footer.component';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import { importAll, loadImage, preloadFonts } from './utils';
+// import { useLocation } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { setLandingImages, setScrollEventImagesOne, setScrollEventImagesTwo, setScrollWeddingImagesOne, setScrollWeddingImagesTwo } from './Redux/actions/images.action';
 import LocomotiveScroll from 'locomotive-scroll';
+// import { siteMap } from './Routes/SiteMap';
 // import { useLocation } from "react-router-dom";
 // import { GetSEOData } from './Services/networkCall';
 
 function App() {
+  // const location = useLocation();
   const [mounted, setMounted] = useState(false);
   const [error, setError] = useState(false);
   const dispatch = useDispatch();
@@ -61,6 +64,7 @@ function App() {
 
 
   useEffect(() => {
+    // window.scrollTo(0,0)
 
     (async () => {
       Promise.all([
@@ -99,7 +103,17 @@ function App() {
 
 
     // menu(resultJson, category)
-  }, [])
+  }, [dispatch, landing, scrollEventOne, scrollEventTwo, scrollWeddingOne, scrollWeddingTwo])
+
+  // useEffect(()=>{
+  //   if(location.pathname === siteMap.GalleryPage.path || location.pathname === siteMap.TeamPage.path){
+  //     console.log("scrollpos");
+  //     window.scrollTo(0,0)
+  //     console.log("path", location.pathname);
+  //   }else{
+  //     window.scrollTo(0,0)
+  //   }
+  // },[location])
 
 
   return (

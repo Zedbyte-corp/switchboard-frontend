@@ -11,6 +11,7 @@ const Team = () => {
     const [PageContent, setPageContent] = useState(teamContent(GetThemeStatus))
 
     useEffect(() => {
+        window.scrollTo(0,0)
         setPageContent(teamContent(GetThemeStatus))
     }, [GetThemeStatus])
 
@@ -24,31 +25,7 @@ const Team = () => {
             <div className='team-page-member-container'>
                 {TeamContainer}
             </div>
-            <div className="team-page-map-container">
-                <div className="team-page-map-title">
-                    {teamContent().mapTitle} 
-                </div>
-                <div className="team-page-map-description">
-                    {teamContent().mapDescription} 
-                </div>
-                <div className="team-page-map-image">
-                    <img className="map-image" src={teamContent().mapImage} alt="" />
-                </div>
-                <div className="team-page-contact-container">
-                    <div className="office-container">
-                        <div className="contact-title">Office Address</div>
-                        <div className="contact-content">{teamContent().officeAddress}</div>
-                    </div>
-                    <div className="office-container">
-                        <div className="contact-title">Contact</div>
-                        <div className="contact-content">{teamContent().contact}</div>
-                    </div>
-                    <div className="office-container">
-                        <div className="contact-title">Email</div>
-                        <div className="contact-content">{teamContent().email}</div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     )
 }
