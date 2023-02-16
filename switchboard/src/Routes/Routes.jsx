@@ -5,10 +5,12 @@ import Home from "../Pages/Home/Home";
 import Gallery from "../Pages/Gallery/Gallery";
 import Team from "../Pages/Team/Team";
 import Contact from "../Pages/Contact/Contact";
+// import ScrollToTop from "./ScrollToTop";
 
 
 const PageRoutes = () => {
   return (
+   
       <Routes>
         <Route path={siteMap.HomePage.path} element={<Home />} />
         <Route path={siteMap.GalleryPage.path} element={<Gallery />} />

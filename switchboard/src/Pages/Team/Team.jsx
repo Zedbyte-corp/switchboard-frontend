@@ -11,7 +11,8 @@ const Team = () => {
     const [PageContent, setPageContent] = useState(teamContent(GetThemeStatus))
 
     useEffect(() => {
-        window.scrollTo(0,0)
+        // window.scrollTo(0,0)
+        // document.body.scrollTop = 0
         setPageContent(teamContent(GetThemeStatus))
     }, [GetThemeStatus])
 

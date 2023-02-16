@@ -8,11 +8,13 @@ import MenuItem from '@mui/material/MenuItem';
 import { useLocation } from 'react-router-dom';
 import WHITELOGO from '../../Assets/logo-white.svg'
 import BLACKLOGO from '../../Assets/logo-black.svg'
+import { useSelector } from "react-redux";
 // import { store } from "../../";
 // import { setProductPage } from '../../Redux/actions/product.action';
 
 
 const Header = () => {
+  const GetThemeStatus = useSelector(state => state.theme)
   const location = useLocation();
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
@@ -20,11 +22,17 @@ const Header = () => {
   const [menuColor, setMenuColor] = useState("#dee0dc")
   const [headerBg, setHeaderBg] = useState("transparent")
   const open = Boolean(anchorEl);
-  const theme = "event-theme"
+  // const [theme, setTheme] = useState("event-theme")
 
   useEffect(() => {
-    
+    // console.log("theme", theme);
     // var header = document.getElementById("Header");
+    if(GetThemeStatus === 0){
+      document.body.setAttribute("data-theme", "event-theme")
+    }else{
+      document.body.setAttribute("data-theme", "wedding-theme")
+    }
+
     console.log("header", document.body.scrollTop);
     if(location.pathname === siteMap.HomePage.path){
       setHeaderBg("transparent")
@@ -37,8 +45,8 @@ const Header = () => {
       setLogo(BLACKLOGO)
       
     }
-    document.body.setAttribute("data-theme", theme)
-  }, [theme,location])
+    
+  }, [GetThemeStatus,location])
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);

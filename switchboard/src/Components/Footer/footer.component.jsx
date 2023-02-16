@@ -5,14 +5,35 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import CallIcon from "@mui/icons-material/Call";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
+import { useNavigate } from "react-router-dom";
+import { siteMap } from "../../Routes/SiteMap";
 // import FooterLogo from '../../Assets/footer-logo.png'
 
 const Footer = () => {
-
+  const navigate = useNavigate();
   const start = Date.now();
   // Your operation
   const totalTimeTaken = Date.now() - start;
   console.log(totalTimeTaken);
+
+  const routeToHome = () => {
+    navigate(siteMap.HomePage.path, { replace: false });
+  }
+
+  const routeToTeam = () => {
+    navigate(siteMap.TeamPage.path, { replace: true });
+    // setTheme("wedding-theme")
+  }
+
+  const routeToGallery = () => {
+    navigate(siteMap.GalleryPage.path, { replace: true });
+    // setTheme("event-theme")
+  }
+
+  const routeToContact = () => {
+    navigate(siteMap.ContactPage.path, { replace: true });
+    // setTheme("event-theme")
+  }
 
 
   return (
@@ -118,12 +139,12 @@ const Footer = () => {
 
             <div className="footer-container-2-right-column">
               <div className="footer-container-2-right-title">Quick Links</div>
-              <div className="footer-container-2-right-content">Home</div>
-              <div className="footer-container-2-right-content">Why Us</div>
-              <div className="footer-container-2-right-content">Gallery</div>
-              <div className="footer-container-2-right-content">Our Teams</div>
-              <div className="footer-container-2-right-content">About Us</div>
-              <div className="footer-container-2-right-content">Contact Us</div>
+              <div className="footer-container-2-right-content" onClick={() => { routeToHome() }}>Home</div>
+              {/* <div className="footer-container-2-right-content">Why Us</div> */}
+              <div className="footer-container-2-right-content" onClick={() => { routeToGallery() }}>Gallery</div>
+              <div className="footer-container-2-right-content" onClick={() => { routeToTeam() }}>Our Teams</div>
+              {/* <div className="footer-container-2-right-content">About Us</div> */}
+              <div className="footer-container-2-right-content" onClick={() => { routeToContact() }}>Contact Us</div>
             </div>
 
             <div className="footer-container-2-right-column">

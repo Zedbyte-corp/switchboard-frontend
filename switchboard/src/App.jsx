@@ -13,6 +13,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 // import { siteMap } from './Routes/SiteMap';
 // import { useLocation } from "react-router-dom";
 // import { GetSEOData } from './Services/networkCall';
+// import ScrollToTop from './Routes/ScrollToTop';
 
 function App() {
   // const location = useLocation();
@@ -124,9 +125,12 @@ function App() {
       :
       mounted ?
         <div className='app-main-container' >
+           {/* <ScrollToTop/> */}
+
           <Header />
           <PageRoutes />
           <Footer />
+           {/* </ScrollToTop> */}
         </div>
         :
         <div className='app-main-container'>

@@ -12,7 +12,7 @@ const Gallery = () => {
     // const scrollto = () => (window.scrollTo(0,0))
 
     useEffect(() => {
-        window.scrollTo(0,0)
+        // window.scrollTo(0,0)
         // scrollto()
         if (window.screen.width <= 760) {
             setIsmobile(true)

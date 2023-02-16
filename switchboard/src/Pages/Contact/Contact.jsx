@@ -1,21 +1,22 @@
 import "./Contact.css"
 import { contactContent } from "../../Model/Contact.content"
+// import { useEffect } from "react"
 
 const Contact = () => {
     return (
         <div className="contact-page-main-container">
-            <div className="team-page-map-container">
-                <div className="team-page-map-title">
+            <div className="contact-page-map-container">
+                <div className="contact-page-map-title">
                     {contactContent().mapTitle} 
                 </div>
-                <div className="team-page-map-description">
+                <div className="contact-page-map-description">
                     {contactContent().mapDescription} 
                 </div>
-                <div className="team-page-map-image">
+                <div className="contact-page-map-image">
                     <img className="map-image" src={contactContent().mapImage} alt="" />
                 </div>
             </div>
-            <div className="team-page-contact-container">
+            <div className="contact-page-contact-container">
                 <div className="office-container">
                     <div className="contact-title">Office Address</div>
                     <div className="contact-content">{contactContent().officeAddress}</div>

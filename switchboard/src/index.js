@@ -10,6 +10,7 @@ import { Provider } from "react-redux";
 import { applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { BrowserRouter } from 'react-router-dom';
+import ScrollToTop from "./Routes/ScrollToTop";
 
 
 export const store = configureStore(
@@ -29,7 +30,9 @@ root.render(
   // <React.StrictMode>
   <Provider store={store}>
     <BrowserRouter>
+    <ScrollToTop>
       <App />
+    </ScrollToTop>
     </BrowserRouter>
   </Provider>
   // </React.StrictMode>
