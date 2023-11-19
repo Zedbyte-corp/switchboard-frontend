@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "switchboard-1dc61"
-  }
+    "default": "theatre-263ad",
+    "switchboard": "theatre-263ad"
+  },
+  "targets": {},
+  "etags": {}
 }

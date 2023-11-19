@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "build",
+    "site": "switchboard-portfolio",
     "ignore": [
       "firebase.json",
       "**/.*",
